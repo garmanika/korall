@@ -53,5 +53,76 @@ $(function () {
       prevEl: ".transparent-slider .swiper-button-prev",
     },
   });
+	//
+	const breakpoint = window.matchMedia('(min-width: 991px)');
+
+	// keep track of swiper instances to destroy later
+	let mySwiper;
+
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+
+	const breakpointChecker = function() {
+
+			// if larger viewport and multi-row layout needed
+			if (breakpoint.matches === true) {
+
+					// clean up old instances and inline styles when available
+					if (mySwiper !== undefined) mySwiper.destroy(true, true);
+
+					// or/and do nothing
+					return;
+
+					// else if a small viewport and single column layout needed
+			} else if (breakpoint.matches === false) {
+
+					// fire small viewport version of swiper
+					return enableSwiper();
+			}
+	};
+
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+
+	const enableSwiper = function() {
+			mySwiper = new Swiper(".hits-items", {
+					slidesPerView: 3,
+					spaceBetween: 30,
+					pagination: {
+							el: ".hits-items .swiper-pagination",
+							clickable: true,
+					},
+					breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+            },
+            575: {
+                slidesPerView: 2,
+
+            },
+            767: {
+                slidesPerView: 3,
+
+            },
+        },
+			});
+
+
+	};
+
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+
+	// keep an eye on viewport size changes
+	breakpoint.addListener(breakpointChecker);
+
+	// kickstart
+	breakpointChecker();
+
+	//
 });
 

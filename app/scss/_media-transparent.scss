@@ -7,14 +7,30 @@
 
 @media (max-width: 767px) {
     .transparent-slider-img{
-        min-height: 260px;
+        height: 260px;
     }
+
+		.transparent-slider .swiper-button-prev{
+			display: none;
+		}
+		.transparent-slider .swiper-button-next{
+			display: none;
+		}
+		.clients-items{
+			gap: 15px;
+		}
 }
 
 @media (max-width: 575px) {
     .transparent-slider-img{
-        min-height: 215px;
+        height: 215px;
     }
+		.clients-items{
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.clients{
+			padding: 23px 0;
+		}
 }
 
 @media (min-width: 1200px) {
