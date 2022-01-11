@@ -65,9 +65,12 @@
 @media (min-width: 1200px) {
 }
 @media (min-width: 992px) {
-	.swiper-wrapper{
-		display: grid;
-		grid-template-columns: repeat(4,1fr);
-		gap: 30px;
+	.hits-items {
+		.swiper-wrapper{
+			display: grid;
+			grid-template-columns: repeat(4,1fr);
+			gap: 30px;
+		}
 	}
+
 }

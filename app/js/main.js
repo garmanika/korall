@@ -124,5 +124,31 @@ $(function () {
 	breakpointChecker();
 
 	//
+  const Swiper3 = new Swiper(".feedback-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+
+    pagination: {
+      el: ".feedback-slider .swiper-pagination",
+      clickable: true,
+    },
+
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+          slidesPerView: 1,
+      },
+      575: {
+          slidesPerView: 2,
+
+      },
+      767: {
+          slidesPerView: 3,
+
+      },
+  },
+  });
 });
 
