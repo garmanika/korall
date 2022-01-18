@@ -48,10 +48,13 @@
 		justify-content: center;
 		margin-top: 40px;
 	}
-	.hits-titles-box{
+	.section-title{
 		margin-bottom: 32px;
 	}
-
+	.hits-items{
+		padding-bottom: 40px;
+	}
+	
 }
 
 @media (max-width: 575px) {
@@ -70,6 +73,10 @@
 			display: grid;
 			grid-template-columns: repeat(4,1fr);
 			gap: 30px;
+			
+		}
+		.swiper{
+			overflow: visible;
 		}
 	}
 

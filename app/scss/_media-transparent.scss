@@ -1,4 +1,5 @@
 @media (max-width: 1199px) {
+
 }
 
 @media (max-width: 991px) {
@@ -6,6 +7,7 @@
 }
 
 @media (max-width: 767px) {
+
     .transparent-slider-img{
         height: 260px;
     }
@@ -16,19 +18,20 @@
 		.transparent-slider .swiper-button-next{
 			display: none;
 		}
-		.clients-items{
+		.brands-items{
 			gap: 15px;
 		}
 }
 
 @media (max-width: 575px) {
+
     .transparent-slider-img{
         height: 215px;
     }
-		.clients-items{
+		.brands-items{
 			grid-template-columns: repeat(2, 1fr);
 		}
-		.clients{
+		.brands{
 			padding: 23px 0;
 		}
 }

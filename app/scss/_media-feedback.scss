@@ -1,0 +1,38 @@
+@media (max-width: 1199px) {
+    .feedback {
+        padding: 80px 0;
+    }
+    .feedback:after{
+        width: calc(50vw - 320px);
+    }
+}
+
+@media (max-width: 991px) {
+.feedback {
+    padding: 80px 0 70px;
+}
+.feedback:after{
+    width: calc(50vw - 180px);
+}
+}
+
+@media (max-width: 767px) {
+    .feedback {
+        padding: 56px 0 60px;
+    }
+    .feedback-titles-box{
+        margin-bottom: 32px;
+    }
+    .feedback:after{
+        width: calc(50vw - 135px);
+    }
+}
+
+@media (max-width: 575px) {
+    .feedback:after{
+        width: 110px;
+    }
+}
+
+@media (min-width: 1200px) {
+}

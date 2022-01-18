@@ -40,7 +40,7 @@ $(function () {
   });
   const Swiper1 = new Swiper(".transparent-slider", {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 5,
     slidesPerGroup: 1,
 
     pagination: {
@@ -98,13 +98,16 @@ $(function () {
             // when window width is >= 320px
             320: {
                 slidesPerView: 1,
+                slidesPerGroup: 1,
             },
             575: {
                 slidesPerView: 2,
+                slidesPerGroup: 2,
 
             },
             767: {
                 slidesPerView: 3,
+                slidesPerGroup: 3,
 
             },
         },
@@ -133,7 +136,10 @@ $(function () {
       el: ".feedback-slider .swiper-pagination",
       clickable: true,
     },
-
+    navigation: {
+      nextEl: ".feedback-slider-next",
+      prevEl: ".feedback-slider-prev",
+    },
 
     breakpoints: {
       // when window width is >= 320px
@@ -144,11 +150,12 @@ $(function () {
           slidesPerView: 2,
 
       },
-      767: {
+      992: {
           slidesPerView: 3,
 
       },
   },
   });
+  $.fancybox.defaults.backFocus = false
 });
 
