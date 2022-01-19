@@ -1,7 +1,7 @@
 $(function () {
-  $('.tan').on('click', function(){
-    $(this).closest(".tan").toggleClass('open-menu')
-  })
+  $(".tan").on("click", function () {
+    $(this).closest(".tan").toggleClass("open-menu");
+  });
   let mobileNavTrigger = $(".menu-btn");
   let mobileNav = $(".header-menu");
   mobileNavTrigger.on("click", function () {
@@ -53,109 +53,98 @@ $(function () {
       prevEl: ".transparent-slider .swiper-button-prev",
     },
   });
-	//
-	const breakpoint = window.matchMedia('(min-width: 991px)');
 
-	// keep track of swiper instances to destroy later
-	let mySwiper;
-
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-
-	const breakpointChecker = function() {
-
-			// if larger viewport and multi-row layout needed
-			if (breakpoint.matches === true) {
-
-					// clean up old instances and inline styles when available
-					if (mySwiper !== undefined) mySwiper.destroy(true, true);
-
-					// or/and do nothing
-					return;
-
-					// else if a small viewport and single column layout needed
-			} else if (breakpoint.matches === false) {
-
-					// fire small viewport version of swiper
-					return enableSwiper();
-			}
-	};
-
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-
-	const enableSwiper = function() {
-			mySwiper = new Swiper(".hits-items", {
-					slidesPerView: 3,
-					spaceBetween: 30,
-					pagination: {
-							el: ".hits-items .swiper-pagination",
-							clickable: true,
-					},
-					breakpoints: {
-            // when window width is >= 320px
-            320: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-            },
-            575: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-
-            },
-            767: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-
-            },
+  const breakpoint = window.matchMedia("(min-width: 991px)");
+  let mySwiper;
+  const breakpointChecker = function () {
+    if (breakpoint.matches === true) {
+      if (mySwiper !== undefined) mySwiper.destroy(true, true);
+      return;
+    } else if (breakpoint.matches === false) {
+      return enableSwiper();
+    }
+  };
+  const enableSwiper = function () {
+    mySwiper = new Swiper(".catalog-items-slider", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".catalog-items-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
         },
-			});
-
-
-	};
-
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-
-	// keep an eye on viewport size changes
-	breakpoint.addListener(breakpointChecker);
-
-	// kickstart
-	breakpointChecker();
-
-	//
+        575: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        767: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+      },
+    });
+  };
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
+  //
   const Swiper3 = new Swiper(".feedback-slider", {
     slidesPerView: 3,
     spaceBetween: 30,
     slidesPerGroup: 1,
-
     pagination: {
       el: ".feedback-slider .swiper-pagination",
       clickable: true,
     },
     navigation: {
-      nextEl: ".feedback-slider-next",
-      prevEl: ".feedback-slider-prev",
+      nextEl: ".feedback-slider-control .slider-next",
+      prevEl: ".feedback-slider-control .slider-prev",
     },
 
     breakpoints: {
-      // when window width is >= 320px
       320: {
-          slidesPerView: 1,
+        slidesPerView: 1,
+				slidesPerGroup: 1,
       },
       575: {
-          slidesPerView: 2,
-
+        slidesPerView: 2,
+				slidesPerGroup: 2,
       },
       992: {
-          slidesPerView: 3,
-
+        slidesPerView: 3,
+				slidesPerGroup: 3,
       },
-  },
+    },
   });
-  $.fancybox.defaults.backFocus = false
+  const Swiper4 = new Swiper(".gallary-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    navigation: {
+      nextEl: ".gallary-slider-conrol .slider-next",
+      prevEl: ".gallary-slider-conrol .slider-prev",
+    },
+    pagination: {
+      el: ".gallary-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+				slidesPerGroup: 1,
+      },
+      575: {
+        slidesPerView: 2,
+				slidesPerGroup: 2,
+      },
+      992: {
+        slidesPerView: 3,
+				slidesPerGroup: 3,
+      },
+    },
+  });
+  $.fancybox.defaults.backFocus = false;
 });
-

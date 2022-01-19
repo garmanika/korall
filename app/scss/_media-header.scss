@@ -27,6 +27,29 @@
 }
 
 @media (max-width: 991px) {
+	.mobile-navigation-box {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		& > ul {
+			max-height: calc(100vh - 150px);
+			overflow: auto;
+			scrollbar-width: thin;
+			&::-webkit-scrollbar {
+				width: 6px;
+			}
+	
+			&::-webkit-scrollbar-track {
+				background: transparent;
+			}
+	
+			&::-webkit-scrollbar-thumb {
+				background-color: #e9e7e7;
+				border-radius: 5px;
+				border: transparent;
+			}
+		}
+	}
     .header-box {
         gap: 0;
     }

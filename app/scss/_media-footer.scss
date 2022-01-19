@@ -1,6 +1,10 @@
  @media (max-width: 1199px) {
-     .footer-bottom-item.mod{
+     .footer-bottom-item.mod,
+		 .footer-feedback-item.mod{
         text-align: right;
+				.navigation-icons{
+					justify-content: flex-end;
+				}
      }
 }
 
@@ -41,6 +45,13 @@
     }
     .footer-bottom-item.mod{
         text-align: left;
+     }
+		 .footer-bottom-item.mod,
+		 .footer-feedback-item.mod{
+        text-align: left;
+				.navigation-icons{
+					justify-content: flex-start;
+				}
      }
 }
 

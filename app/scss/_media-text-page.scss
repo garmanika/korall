@@ -3,14 +3,14 @@
 }
 
 @media (max-width: 991px) {
-    .text-page .img-vw {
+    .text-page .img {
         margin: 48px 0;
     }
 
 }
 
 @media (max-width: 767px) {
-    .text-page .img-vw {
+    .text-page .img {
         margin: 32px 0;
     }
     .text-page h2 {
@@ -34,10 +34,9 @@
     .text-page h3{
         font-size: 15px;
         margin-bottom: 25px;
+				margin-top: 40px;
     }
-    .responsive-table{
-        margin-top: 25px;
-    }
+
     .text-page ol, .text-page ul {
         margin: 24px 0 32px;
     }
@@ -45,11 +44,14 @@
         padding-bottom: 32px;
     }
 
-    .breadcrumbs-title{
+    .page-title{
         font-size: 24px;
         line-height: 32px;
     }
-
+		blockquote,
+		.responsive-table{
+			margin: 24px 0 32px;
+		}
 }
 
 

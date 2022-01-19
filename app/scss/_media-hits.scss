@@ -8,10 +8,10 @@
 	.hits{
 		padding: 70px 0; 
 	}
-	.hits-items{
+	.catalog-items-slider{
 		padding-bottom: 50px;
 	}
-	.hits-items .swiper-pagination {
+	.catalog-items-slider .swiper-pagination {
     display: flex;
 		width: 100%;
 		justify-content: center;
@@ -31,7 +31,7 @@
 			background: #5DB3DA;
 		}
 }
-.hits-items{
+.catalog-items-slider{
 	.swiper-slide{
 		height: auto;
 	}
@@ -51,7 +51,7 @@
 	.section-title{
 		margin-bottom: 32px;
 	}
-	.hits-items{
+	.catalog-items-slider{
 		padding-bottom: 40px;
 	}
 	
@@ -68,7 +68,7 @@
 @media (min-width: 1200px) {
 }
 @media (min-width: 992px) {
-	.hits-items {
+	.catalog-items-slider {
 		.swiper-wrapper{
 			display: grid;
 			grid-template-columns: repeat(4,1fr);
