@@ -1,6 +1,6 @@
  @media (max-width: 1199px) {
-     .footer-bottom-item.mod,
-		 .footer-feedback-item.mod{
+     .footer-bottom-item-pos,
+		 .footer-feedback-item-pos{
         text-align: right;
 				.navigation-icons{
 					justify-content: flex-end;
@@ -19,13 +19,13 @@
     .footer-feedback-item-title{
         min-height: auto;
     }
-    .footer-feedback-item-links.mod{
+    .margin-md-0{
         margin: 0;
     }
     .footer-feedback-item-link-email{
         margin-top: 8px;
     }
-    .footer-feedback-item.mod{
+    .footer-feedback-item-pos{
         text-align: right;
     }
     .footer-feedback-item .navigation-icons{
@@ -34,7 +34,7 @@
 }
 
 @media (max-width: 575px) {
-    .footer-feedback-item.mod{
+    .footer-feedback-item-pos{
         text-align: left;
         .footer-feedback-item-title{
             margin: 40px 0 26px;
@@ -43,11 +43,11 @@
     .footer-feedback-item .navigation-icons{
         justify-content: flex-start;
     }
-    .footer-bottom-item.mod{
+    .footer-bottom-item-pos{
         text-align: left;
      }
-		 .footer-bottom-item.mod,
-		 .footer-feedback-item.mod{
+		 .footer-bottom-item-pos,
+		 .footer-feedback-item-pos{
         text-align: left;
 				.navigation-icons{
 					justify-content: flex-start;

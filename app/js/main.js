@@ -54,7 +54,7 @@ $(function () {
     },
   });
 
-  const breakpoint = window.matchMedia("(min-width: 991px)");
+  const breakpoint = window.matchMedia("(min-width: 992px)");
   let mySwiper;
   const breakpointChecker = function () {
     if (breakpoint.matches === true) {
@@ -113,7 +113,7 @@ $(function () {
         slidesPerView: 2,
 				slidesPerGroup: 2,
       },
-      992: {
+      991: {
         slidesPerView: 3,
 				slidesPerGroup: 3,
       },
@@ -140,7 +140,34 @@ $(function () {
         slidesPerView: 2,
 				slidesPerGroup: 2,
       },
-      992: {
+      991: {
+        slidesPerView: 3,
+				slidesPerGroup: 3,
+      },
+    },
+  });
+  const Swiper5 = new Swiper(".video-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    navigation: {
+      nextEl: ".video-slider-inner .swiper-button-next",
+      prevEl: ".video-slider-inner .swiper-button-prev ",
+    },
+    pagination: {
+      el: ".video-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+				slidesPerGroup: 1,
+      },
+      575: {
+        slidesPerView: 2,
+				slidesPerGroup: 2,
+      },
+      991: {
         slidesPerView: 3,
 				slidesPerGroup: 3,
       },
