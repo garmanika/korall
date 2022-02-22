@@ -163,7 +163,7 @@ $(function () {
         slidesPerView: 1,
 				slidesPerGroup: 1,
       },
-      575: {
+      768: {
         slidesPerView: 2,
 				slidesPerGroup: 2,
       },

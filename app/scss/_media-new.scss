@@ -94,7 +94,12 @@
 }
 
 @media (max-width: 575px) {
-
+    .list-control.list-control-column .list-control-item{
+        width: 100%;
+        .btn{
+            width: 100%;
+        }
+    }
     .list-control-pagination{
         gap: 8px;
         flex-wrap: wrap
