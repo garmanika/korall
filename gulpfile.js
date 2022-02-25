@@ -2,7 +2,7 @@ let gulp = require('gulp'),
   sass = require('gulp-sass'),
   rename = require('gulp-rename');
   browserSync = require('browser-sync'),
-  autoprefixer = require('gulp-autoprefixer'),
+  // autoprefixer = require('gulp-autoprefixer'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   cleanCss = require('gulp-clean-css');
@@ -11,18 +11,18 @@ let gulp = require('gulp'),
 gulp.task('sass', function () {
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass({ outputStyle: 'expanded' }))
-    .pipe(autoprefixer({
-      overrideBrowserslist: ['last 8 versions'],
-      browsers: [
-        'Android >= 4',
-        'Chrome >= 20',
-        'Firefox >= 24',
-        'Explorer >= 11',
-        'iOS >= 6',
-        'Opera >= 12',
-        'Safari >= 6',
-    ],
-    }))
+    // .pipe(autoprefixer({
+    //   overrideBrowserslist: ['last 8 versions'],
+    //   browsers: [
+    //     'Android >= 4',
+    //     'Chrome >= 20',
+    //     'Firefox >= 24',
+    //     'Explorer >= 11',
+    //     'iOS >= 6',
+    //     'Opera >= 12',
+    //     'Safari >= 6',
+    // ],
+    // }))
     .pipe(cleanCss({ level: { 2: { specialComments: 0 } }, format: 'beautify' }))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({ stream: true }))

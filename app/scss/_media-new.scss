@@ -59,13 +59,16 @@
 }
 .list-control{
 	grid-template-columns: 1fr;
-	gap: 12px;
-	&.mod{
-		gap: 24px;
+	.list-control-item{
+		margin-top: 12px;
 	}
 }
 .list-control-pagination{
 	order: -1;
+	
+}
+.list-control.list-control-column .list-control-item{
+	margin: 0;
 }
 .catalog-items.list .catalog-item-content{
     grid-template-columns: minmax(auto,97px) 1fr;
@@ -80,9 +83,6 @@
     .catalog-item-more{
         width: auto;
     }
-}
-.list-control-column .list-control-pagination{
-    margin: 0;
 }
 .gallary-slider {
     padding-bottom: 40px;

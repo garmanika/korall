@@ -107,15 +107,15 @@ $(function () {
     breakpoints: {
       320: {
         slidesPerView: 1,
-				slidesPerGroup: 1,
+        slidesPerGroup: 1,
       },
       575: {
         slidesPerView: 2,
-				slidesPerGroup: 2,
+        slidesPerGroup: 2,
       },
       991: {
         slidesPerView: 3,
-				slidesPerGroup: 3,
+        slidesPerGroup: 3,
       },
     },
   });
@@ -134,15 +134,15 @@ $(function () {
     breakpoints: {
       320: {
         slidesPerView: 1,
-				slidesPerGroup: 1,
+        slidesPerGroup: 1,
       },
-      575: {
+      768: {
         slidesPerView: 2,
-				slidesPerGroup: 2,
+        slidesPerGroup: 2,
       },
       991: {
         slidesPerView: 3,
-				slidesPerGroup: 3,
+        slidesPerGroup: 3,
       },
     },
   });
@@ -161,17 +161,227 @@ $(function () {
     breakpoints: {
       320: {
         slidesPerView: 1,
-				slidesPerGroup: 1,
+        slidesPerGroup: 1,
       },
       768: {
         slidesPerView: 2,
-				slidesPerGroup: 2,
+        slidesPerGroup: 2,
       },
       991: {
         slidesPerView: 3,
-				slidesPerGroup: 3,
+        slidesPerGroup: 3,
       },
     },
   });
+  const Swiper6 = new Swiper(".catalog-detail-product-slider-thumbs", {
+    spaceBetween: 15,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  const Swiper7 = new Swiper(".catalog-detail-product-slider", {
+    spaceBetween: 15,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    navigation: {
+      nextEl: ".catalog-detail-product-slider .swiper-button-next",
+      prevEl: ".catalog-detail-product-slider .swiper-button-prev",
+    },
+    pagination: {
+      el: ".catalog-detail-product-slider-pagination",
+      clickable: true,
+    },
+    thumbs: {
+      swiper: Swiper6,
+    },
+  });
+  $('.product').each(function () {
+    let section = $(this);
+    new Swiper(section.find('.product-slider')[0], {
+      spaceBetween: 30,
+      navigation: {
+        nextEl: section.find('.slider-next')[0],
+        prevEl: section.find('.slider-prev')[0],
+      },
+      pagination: {
+        el: ".product-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        991: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
+      },
+    });
+  });
+  $('.product').each(function () {
+    let section = $(this);
+    new Swiper(section.find('.product-slider')[1], {
+      spaceBetween: 30,
+      navigation: {
+        nextEl: section.find('.slider-next')[1],
+        prevEl: section.find('.slider-prev')[1],
+      },
+      pagination: {
+        el: ".product-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        991: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
+      },
+    });
+  });
+  $('.brands-page').each(function () {
+    let section = $(this);
+    new Swiper(section.find('.brands-page-item-slider')[0], {
+      spaceBetween: 30,
+      navigation: {
+        nextEl: section.find('.slider-next')[0],
+        prevEl: section.find('.slider-prev')[0],
+      },
+      pagination: {
+        el: ".brands-page-item-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        991: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+      },
+    });
+  });
+  $('.brands-page').each(function () {
+    let section = $(this);
+    new Swiper(section.find('.brands-page-item-slider')[1], {
+      spaceBetween: 30,
+      navigation: {
+        nextEl: section.find('.slider-next')[1],
+        prevEl: section.find('.slider-prev')[1],
+      },
+      pagination: {
+        el: ".brands-page-item-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        991: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+      },
+    });
+  });
+  $('.brands-page').each(function () {
+    let section = $(this);
+    new Swiper(section.find('.brands-page-item-slider')[2], {
+      spaceBetween: 30,
+      navigation: {
+        nextEl: section.find('.slider-next')[2],
+        prevEl: section.find('.slider-prev')[2],
+      },
+      pagination: {
+        el: ".brands-page-item-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        991: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+      },
+    });
+  });
+  $('.brands-page').each(function () {
+    let section = $(this);
+    new Swiper(section.find('.brands-page-item-slider')[3], {
+      spaceBetween: 30,
+      navigation: {
+        nextEl: section.find('.slider-next')[3],
+        prevEl: section.find('.slider-prev')[3],
+      },
+      pagination: {
+        el: ".brands-page-item-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        991: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+      },
+    });
+  });
+  const Swiper8 = new Swiper(".feedback-slider-mod", {
+    spaceBetween: 15,
+    slidesPerView: 2,
+    slidesPerGroup: 1,
+  });
+  $(".tabs-item").click(function () {
+    let id = $(this).attr("data-tab"),
+      content = $('.tab-content[data-tab="' + id + '"]');
+    $(".tabs-item.active").removeClass("active");
+    $(this).addClass("active");
+    $(".tab-content.active").removeClass("active");
+    content.addClass("active");
+  });
+  $(".product .feedback-slider-item").each(function (indx, el) {
+    if ($(this).children('.feedback-slider-item-imgs').length > 0) {
+      $(this).addClass('feedback-img');
+    }
+  });
+
   $.fancybox.defaults.backFocus = false;
 });
